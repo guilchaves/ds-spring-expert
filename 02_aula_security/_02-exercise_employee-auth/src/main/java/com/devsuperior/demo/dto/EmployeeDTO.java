@@ -1,12 +1,16 @@
 package com.devsuperior.demo.dto;
 
 import com.devsuperior.demo.entities.Employee;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class EmployeeDTO {
 	
 	private Long id;
+	@NotBlank(message = "Campo requerido")
 	private String name;
 	private String email;
+	@NotNull(message = "Campo requerido")
 	private Long departmentId;
 	
 	public EmployeeDTO() {
