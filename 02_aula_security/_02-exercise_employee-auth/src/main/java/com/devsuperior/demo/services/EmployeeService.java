@@ -1,5 +1,6 @@
 package com.devsuperior.demo.services;
 
+import com.devsuperior.demo.dto.EmployeeInsertDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,7 +25,7 @@ public class EmployeeService {
 	}
 
 	@Transactional
-	public EmployeeDTO insert(EmployeeDTO dto) {
+	public EmployeeDTO insert(EmployeeInsertDTO dto) {
 		Employee entity = new Employee();
 		entity.setName(dto.getName());
 		entity.setEmail(dto.getEmail());
