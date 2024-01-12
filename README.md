@@ -24,8 +24,8 @@ Esse repositório contém exercícios e projetos desenvolvidos durante o treinam
 - Testes de API com RestAssured
 
 ### Desafios e projetos
-☐ TDD Event City</br>
-☐ Validação e segurança</br>
+✅ [TDD Event City](https://github.com/guilchaves/spring-expert-desafio-01)</br>
+☐ [Validação e segurança](https://github.com/guilchaves/spring-expert-desafio-02)</br>
 ☐ MovieFlix</br>
 ☐ DSMovie Jacoco</br>
 ☐ DSMovie RestAssured</br>
