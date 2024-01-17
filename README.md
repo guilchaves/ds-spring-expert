@@ -25,7 +25,7 @@ Esse repositório contém exercícios e projetos desenvolvidos durante o treinam
 
 ### Desafios e projetos
 ✅ [TDD Event City](https://github.com/guilchaves/spring-expert-desafio-01)</br>
-☐ [Validação e segurança](https://github.com/guilchaves/spring-expert-desafio-02)</br>
-☐ MovieFlix</br>
+✅ [Validação e segurança](https://github.com/guilchaves/spring-expert-desafio-02)</br>
+☐ [MovieFlix](https://github.com/guilchaves/spring-expert-desafio-03)</br>
 ☐ DSMovie Jacoco</br>
 ☐ DSMovie RestAssured</br>
