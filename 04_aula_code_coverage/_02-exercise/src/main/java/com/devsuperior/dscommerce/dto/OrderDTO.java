@@ -74,4 +74,16 @@ public class OrderDTO {
 		}
 		return sum;
 	}
+
+	@Override
+	public String toString() {
+		return "OrderDTO{" +
+				"id=" + id +
+				", moment=" + moment +
+				", status=" + status +
+				", client=" + client +
+				", payment=" + payment +
+				", items=" + items +
+				'}';
+	}
 }
