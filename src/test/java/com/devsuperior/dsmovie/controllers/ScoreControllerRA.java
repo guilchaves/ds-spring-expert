@@ -15,10 +15,9 @@ import static io.restassured.RestAssured.given;
 public class ScoreControllerRA {
 
     private String clientUsername, clientPassword, adminUsername, adminPassword;
-    private String clientToken, adminToken, invalidToken;
-    private Long existingId, nonExistingId, dependableId;
-    private String movieName;
-    private Map<String, Object> postScoreInstance, postScoreInstanceWithoutId, postScoreInstanceNegativeScore;
+    private String adminToken;
+    private Long existingId, nonExistingId;
+    private Map<String, Object> postScoreInstance;
 
 
     @BeforeEach
@@ -31,24 +30,15 @@ public class ScoreControllerRA {
         adminPassword = "123456";
 
         nonExistingId = 0L;
-        dependableId = 1L;
         existingId = 2L;
 
-        clientToken = TokenUtil.obtainAccessToken(clientUsername, clientPassword);
         adminToken = TokenUtil.obtainAccessToken(adminUsername, adminPassword);
-        invalidToken = adminToken + "xpto";
 
         postScoreInstance = new HashMap<>();
         postScoreInstance.put("movieId", nonExistingId);
         postScoreInstance.put("score", 3.0);
-
-        postScoreInstanceWithoutId = new HashMap<>();
-        postScoreInstanceWithoutId.put("score", 3.0);
-
-        postScoreInstanceNegativeScore = new HashMap<>();
-        postScoreInstanceNegativeScore.put("movieId", existingId);
-        postScoreInstanceNegativeScore.put("score", -2.0);
     }
+
     @Test
     public void saveScoreShouldReturnNotFoundWhenMovieIdDoesNotExist() throws Exception {
         JSONObject newScore = new JSONObject(postScoreInstance);
